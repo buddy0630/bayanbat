@@ -2,112 +2,132 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Your Name - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional CV and portfolio of Buddy.">
-    <title>Buddy's CV</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 2em;
-            color: #333;
-        }
-        section {
-            margin: 20px 0;
-        }
-        .portfolio ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .portfolio li {
-            width: 200px;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-            padding: 10px;
-            display: block;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            text-align: center;
-            background-color: #fff;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        a:hover {
-            background-color: #007bff;
-            color: #fff;
-        }
-        .profile-pic {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%; /* Makes the image circular */
-        object-fit: cover; /* Ensures the image scales nicely */
-        margin-bottom: 10px;
-        border: 3px solid #ddd; /* Optional border around the picture */
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    </style>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Buddy</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <header>
-        <img src="p.jpg" alt="Buddy's Picture" class="profile-pic">
-        <h1>Buddy's CV</h1>
-        <p>A brief introduction about myself and my work in tech.</p>
-    </header>
-    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Bayanbat</span></h1>
+            <p>A <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
 
-    <section>
+    <!-- About Section -->
+    <section id="about" class="about-section">
         <h2>About Me</h2>
-        <p>Experienced developer with a passion for building user-friendly applications and websites.</p>
+        <div class="about-content">
+            <img src="buddy.jpeg" alt="Your Photo">
+            <div class="text">
+                <p>Write a brief bio about yourself, your skills, and your passions.</p>
+                <a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Python, C</li>
-            <li>SQL, Database Management</li>
-        </ul>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <!-- Project Card -->
+            <div class="project-card">
+                <img src="project.webp" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project One</h3>
+                    <p>Short description of the project.</p>
+                    <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="project.webp" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project One</h3>
+                    <p>Short description of the project.</p>
+                    <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="project.webp" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project One</h3>
+                    <p>Short description of the project.</p>
+                    <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <img src="project.webp" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project One</h3>
+                    <p>Short description of the project.</p>
+                    <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="project.webp" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project One</h3>
+                    <p>Short description of the project.</p>
+                    <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="project.webp" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project One</h3>
+                    <p>Short description of the project.</p>
+                    <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <!-- Repeat for more projects -->
+        </div>
     </section>
 
-    <section>
-        <h2>Experience</h2>
-        <p>Details of relevant work experience go here.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <div class="contact-content">
+            <form action="mailto:your.email@example.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="mail" placeholder="Your Email" required>
+                <textarea name="comment" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                <!-- Add more social icons as needed -->
+            </div>
+        </div>
     </section>
 
-    <section class="portfolio">
-        <h2>Portfolio</h2>
-        <ul>
-            <li><a href="#">Lab 1</a></li>
-            <li><a href="https://buddy0630.github.io/profile/">Lab 2 - Profile</a></li>
-            <li><a href="https://buddy0630.github.io/lab3/indexlab/">Lab 3 - Index</a></li>
-            <li><a href="https://buddy0630.github.io/lab4/page0">Lab 4 - Page</a></li>
-            <li><a href="https://buddy0630.github.io/lab5/">Lab 5 - Overview</a></li>
-            <li><a href="https://buddy0630.github.io/lab6/">Lab 6 - Final Project</a></li>
-            <li><a href="https://buddy0630.github.io/lab8/">Lab 8 - JavaScript</a></li>
-        </ul>
-    </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Buddy. All rights reserved.</p>
+    </footer>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Email: buddy@example.com</p>
-    </section>
-
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
