@@ -1,42 +1,82 @@
-// Typed Text Effect
-const typedTextSpan = document.querySelector(".typed-text");
-const cursorSpan = document.querySelector(".cursor");
+        // GitHub Username - replace with your own
+        const GITHUB_USERNAME = 'buddy0630';
 
-const textArray = ["Web Developer.", "Designer.", "Programmer."];
-const typingDelay = 100;
-const erasingDelay = 50;
-const newTextDelay = 2000; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
+        // GitHub Repositories Fetch Function
+        async function fetchGitHubRepos() {
+            const reposContainer = document.getElementById('githubRepos');
+            
+            try {
+                // Fetch repositories sorted by stars in descending order
+                const response = await fetch(`https://api.github.com/users/buddy0630/repos?sort=stars&direction=desc`);
+                
+                if (!response.ok) {
+                    throw new Error('GitHub API request failed');
+                }
+                
+                const repos = await response.json();
+                
+                // Clear loading spinner
+                reposContainer.innerHTML = '';
+                
+                // Limit to top 6 repositories
+                const topRepos = repos.slice(0, 6);
+                
+                topRepos.forEach(repo => {
+                    const repoCard = document.createElement('div');
+                    repoCard.className = 'github-repo-card';
+                    
+                    repoCard.innerHTML = `
+                        <h5 class="card-title">
+                            <a href="${repo.html_url}" target="_blank" class="text-light">
+                                ${repo.name}
+                            </a>
+                        </h5>
+                        <p class="text-secondary">
+                            ${repo.description || 'No description available'}
+                        </p>
+                        <div class="repo-stats">
+                            <span>
+                                <i class="fas fa-star text-warning"></i> 
+                                ${repo.stargazers_count}
+                            </span>
+                            <span>
+                                <i class="fas fa-code-branch text-info"></i> 
+                                ${repo.forks_count}
+                            </span>
+                            <span>
+                                <i class="fas fa-code text-success"></i> 
+                                ${repo.language || 'Unknown'}
+                            </span>
+                        </div>
+                    `;
+                    
+                    reposContainer.appendChild(repoCard);
+                });
+            } catch (error) {
+                reposContainer.innerHTML = `
+                    <div class="text-center text-danger">
+                        <p>Unable to load GitHub repositories</p>
+                        <small>${error.message}</small>
+                    </div>
+                `;
+                console.error('GitHub API Error:', error);
+            }
+        }
 
-function type() {
-    if (charIndex < textArray[textArrayIndex].length) {
-        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, typingDelay);
-    } 
-    else {
-        cursorSpan.classList.remove("typing");
-        setTimeout(erase, newTextDelay);
-    }
-}
+        // Fetch repositories when page loads
+        document.addEventListener('DOMContentLoaded', fetchGitHubRepos);
+        emailjs.init("G3fXwHURMFoH3pvB8");
 
-function erase() {
-    if (charIndex > 0) {
-        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-        charIndex--;
-        setTimeout(erase, erasingDelay);
-    } 
-    else {
-        cursorSpan.classList.remove("typing");
-        textArrayIndex++;
-        if(textArrayIndex >= textArray.length) textArrayIndex = 0;
-        setTimeout(type, typingDelay + 1100);
-    }
-}
+// Form submission handler
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
 
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-    if(textArray.length) setTimeout(type, newTextDelay + 250);
+    // Send the form data using EmailJS
+    emailjs.sendForm('service_mb5tneh', 'template_gm55v6i', this)
+        .then(function(response) {
+            alert('Message sent successfully! Thank you for reaching out.');
+        }, function(error) {
+            alert('Failed to send the message. Please try again later.');
+            console.error('EmailJS error:', error);
+        });
 });

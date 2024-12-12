@@ -1,131 +1,169 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bayanbat's Portfolio - Web Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta Description for SEO -->
-    <meta name="description" content="Welcome to Bayanbat's portfolio. Explore my projects, learn more about me, and get in touch to collaborate. I specialize in web development and creative solutions.">
-    
-    <!-- Keywords for SEO -->
-    <meta name="keywords" content="Bayanbat, web developer, portfolio, projects, contact, web development, creative solutions">
-    <meta name="author" content="Bayanbat">
-    
-    <!-- Link to external CSS -->
+    <title>Bayanbat | Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="logo">Buddy</div>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
-        <ul class="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bayanbat</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#github-repos">GitHub Repos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="">
-        <div class="hero-content">
-            <h1>Hi, I'm <span>Bayanbat</span></h1>
-            <p>A <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
-            <a href="#projects" class="btn">View My Work</a>
+    <header class="header-section">
+        <div class="container">
+            <img src="profile_magicstudio_e66ogio65dj (1).png" alt="Profile Picture" class="profile-img mb-4">
+            <h1 class="display-4">Bayanbat</h1>
+            <p class="lead text-secondary">Full Stack Developer | Tech Innovator</p>
         </div>
-    </section>
+    </header>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <img src="buddy.jpeg" alt="Your Photo">
-            <div class="text">
-                <p>
-                    I am a passionate web developer with expertise in creating visually stunning, user-friendly websites. 
-                    I specialize in front-end development using HTML, CSS, and JavaScript, and I have experience working 
-                    on various projects that focus on responsive design and interactivity. 
-                    With a knack for problem-solving and a drive for innovation, 
-                    I aim to deliver impactful digital solutions that stand out.
-                </p>
-                <p>
-                    In addition to web development, I enjoy exploring UI/UX design principles, 
-                    ensuring that every project I work on provides an exceptional user experience. 
-                    My goal is to continuously learn and grow as a developer, while contributing to projects 
-                    that make a real-world difference.
-                </p>
-                <a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">About Me</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="text-center text-secondary">
+                        A passionate developer with a keen eye for innovative solutions and cutting-edge technologies. 
+                        I transform complex challenges into elegant digital experiences that push the boundaries of what's possible.
+                    </p>
+                </div>
             </div>
-            
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <h2>My Projects</h2>
-        <div class="projects-grid">
-            <!-- Project Cards -->
-            <div class="project-card">
-                <img src="project.webp" alt="Project 1">
-                <div class="project-info">
-                    <h3>extra</h3>
-                    <p>Short description of the project.</p>
-                    <a href="https://buddy0630.github.io/extra/extralol.html" target="_blank">View on GitHub</a>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="text-center section-title">Technical Skills</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h4 class="text-secondary">Frontend</h4>
+                    <p>Html, Css, JavaScript, Bootstrap</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-secondary">Backend</h4>
+                    <p>Node.js, Express.js</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-secondary">DevOps</h4>
+                    <p>PostgreSQL, Figma, C, Networking</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="project-card">
-                <img src="project.webp" alt="Project 1">
-                <div class="project-info">
-                    <h3>Project One</h3>
-                    <p>Short description of the project.</p>
-                    <a href="https://github.com/buddy0630/restaurant" target="_blank">View on GitHub</a>
+    <!-- Static Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Featured Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="weather_website.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Weather Website</h5>
+                            <p class="card-text text-secondary">Use a weather API OpenWeatherMap to fetch weather details.</p>
+                            <a href="https://buddy0630.github.io/weather/index1.html" class="btn btn-primary">Explore Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="login_page.png" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Relational user database login page</h5>
+                            <p class="card-text text-secondary">I created a functional user data saving and login page using PostgreSQL with Node.js.</p>
+                            <a href="https://login.bayanbat.com/" class="btn btn-primary">Explore Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="crypto.png" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Crypto Dashboard</h5>
+                            <p class="card-text text-secondary">Real-time market price data visualization and performance monitoring</p>
+                            <a href="https://buddy0630.github.io/crypto/" class="btn btn-primary">Explore Project</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="project-card">
-                <img src="project.webp" alt="Project 1">
-                <div class="project-info">
-                    <h3>Project One</h3>
-                    <p>Short description of the project.</p>
-                    <a href="https://github.com/buddy0630/restaurant" target="_blank">View on GitHub</a>
+    <!-- GitHub Repositories Section -->
+    <section id="github-repos" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">GitHub Repositories</h2>
+            <div id="githubRepos" class="loading-spinner">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
                 </div>
             </div>
-            <!-- Repeat for more projects -->
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <div class="contact-content">
-            <form action="buddybayanbat@gmail.com" method="POST" enctype="text/plain">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="mail" placeholder="Your Email" required>
-                <textarea name="comment" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/buddy0630" target="_blank"><i class="fab fa-github"></i></a>
-                <!-- Add more social icons as needed -->
+        <div class="container">
+            <h2 class="text-center section-title">Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="user_name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" name="user_email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>                    
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Buddy. All rights reserved.</p>
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="text-secondary">&copy; 2024 Bayanbat. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#" class="fab fa-linkedin"></a>
+                <a href="#" class="fab fa-github"></a>
+                <a href="#" class="fab fa-twitter"></a>
+            </div>
+        </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- External JS -->
     <script src="script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
