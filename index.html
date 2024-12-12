@@ -134,13 +134,13 @@
                 <div class="col-lg-6 mx-auto">
                     <form id="contactForm">
                         <div class="mb-3">
-                            <input type="text" class="form-control" name="user_name" placeholder="Your Name" required>
+                            <input type="text" id="name" class="form-control" name="user_name" placeholder="Your Name" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" name="user_email" placeholder="Your Email" required>
+                            <input type="email" id="email" class="form-control" name="user_email" placeholder="Your Email" required>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Send Message</button>
                     </form>                    
@@ -160,6 +160,8 @@
             </div>
         </div>
     </footer>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <!-- External JS -->
     <script src="script.js"></script>
